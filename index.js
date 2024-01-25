@@ -12,7 +12,7 @@ async function carregarEstados() {
 async function alterarEstado() {
   try {
     var response = await axios.api.put("/estados/ES", {
-      nome: "Espírito Santo",
+      nome: "Espírito Santo"
     });
   } catch (erro) {
     console.log("Ocorreu um erro ao alterar o estado");
@@ -22,8 +22,8 @@ async function alterarEstado() {
 async function incluirEstado() {
   try {
     var response = await axios.api.post("/estados", {
-      id: "BA",
-      nome: "Bahia",
+      id: "ES",
+      nome: "Espírito Santo"
     });
 
     console.log(response.data);
@@ -32,6 +32,15 @@ async function incluirEstado() {
   }
 }
 
+async function deletarEstado() {
+  try {
+    await axios.api.delete("/estados/ES");
+  } catch (erro) {
+    console.log("Ocorreu um erro ao deletar o estado");
+  }
+}
+
 //carregarEstados();
 //alterarEstado();
-incluirEstado();
+//incluirEstado();
+deletarEstado();
