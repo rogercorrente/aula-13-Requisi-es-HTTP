@@ -15,6 +15,10 @@
     {
       "id": "SP",
       "nome": "São Paulo"
+    },
+    {
+      "id": "BA",
+      "nome": "Bahia"
     }
   ]
 }

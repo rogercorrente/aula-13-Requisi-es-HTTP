@@ -19,5 +19,19 @@ async function alterarEstado() {
   }
 }
 
+async function incluirEstado() {
+  try {
+    var response = await axios.api.post("/estados", {
+      id: "BA",
+      nome: "Bahia",
+    });
+
+    console.log(response.data);
+  } catch (erro) {
+    console.log("Ocorreu um erro ao incluir o estado");
+  }
+}
+
 //carregarEstados();
-alterarEstado();
+//alterarEstado();
+incluirEstado();
